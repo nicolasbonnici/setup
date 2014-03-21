@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\setup\Controllers;
+namespace bundles\setup\Controllers;
 
 /**
  * Manage Core Setup HomeController
