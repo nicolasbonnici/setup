@@ -1,21 +1,11 @@
 {% extends 'layout.tpl' %} {% block meta_title %}Setup{% endblock meta_title %} {% block meta_description %}{% endblock
 meta_description %} {% block js %}
-<script
-    type="text/javascript"
-    src="/lib/plugins/hotkeys/js/jquery.hotkeys.js"></script>
-<script
-    type="text/javascript"
-    src="/lib/plugins/bootstrap-wysiwyg/js/bootstrap-wysiwyg.js"></script>
-<script
-    type="text/javascript"
-    src="/lib/plugins/bootstrap-editable/js/bootstrap-editable.min.js"></script>
+<script type="text/javascript" src="/lib/plugins/hotkeys/js/jquery.hotkeys.js"></script>
+<script type="text/javascript" src="/lib/plugins/bootstrap-wysiwyg/js/bootstrap-wysiwyg.js"></script>
+<script type="text/javascript" src="/lib/plugins/bootstrap-editable/js/bootstrap-editable.min.js"></script>
 {% endblock %} {% block css %}
-<link
-    href="/lib/plugins/bootstrap-wysiwyg/css/bootstrap-wysiwyg.css"
-    rel="stylesheet">
-<link
-    href="/lib/plugins/bootstrap-editable/css/bootstrap-editable.css"
-    rel="stylesheet">
+<link href="/lib/plugins/bootstrap-wysiwyg/css/bootstrap-wysiwyg.css" rel="stylesheet">
+<link href="/lib/plugins/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet">
 {% endblock %} {% block main %}
 <div class="transparentBlackBg rounded well ui-shadow">
     <div class="row">
@@ -30,18 +20,12 @@ meta_description %} {% block js %}
             <div class="row clearfix">
                 <div class="col-md-3 column">
                     <div class="list-group">
-                        <a
-                            href="#"
-                            class="list-group-item active"><span class="glyphicon glyphicon-dashboard"></span>
+                        <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-dashboard"></span>
                             Tableau de bord</a>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a
-                                    href="#"
-                                    class="ui-sendxhr"
-                                    data-url="/backend/setup/users"
-                                    data-selector="#setupMain"
-                                    title="{{tr['users_managment_tip']}}"
+                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/users"
+                                    data-selector="#setupMain" title="{{tr['users_managment_tip']}}"
                                     data-placement="right"> <span class="glyphicon glyphicon-user"></span>
                                     {{tr['users_managment']}}
                                 </a>
@@ -49,25 +33,16 @@ meta_description %} {% block js %}
                         </div>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a
-                                    href="#"
-                                    class="ui-sendxhr"
-                                    data-url="/backend/setup/acl"
-                                    data-selector="#setupMain"
-                                    title="{{tr['acl_managment_tip']}}"
-                                    data-placement="right"> <span class="glyphicon glyphicon-lock"></span>
-                                    {{tr['acl_managment']}}
+                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/acl" data-selector="#setupMain"
+                                    title="{{tr['acl_managment_tip']}}" data-placement="right"> <span
+                                    class="glyphicon glyphicon-lock"></span> {{tr['acl_managment']}}
                                 </a>
                             </p>
                         </div>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a
-                                    href="#"
-                                    class="ui-sendxhr"
-                                    data-url="/backend/setup/entities"
-                                    data-selector="#setupMain"
-                                    title="{{tr['entities_managment_tip']}}"
+                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/entities"
+                                    data-selector="#setupMain" title="{{tr['entities_managment_tip']}}"
                                     data-placement="right"> <span class="glyphicon glyphicon-hdd"></span>
                                     {{tr['entities_managment']}}
                                 </a>
@@ -84,9 +59,7 @@ meta_description %} {% block js %}
                         </div>
                     </div>
                 </div>
-                <div
-                    id="setupMain"
-                    class="col-md-9 column">
+                <div id="setupMain" class="col-md-9 column">
                     <h1>Serveur</h1>
                     <h3>PHP</h3>
                     <p>
