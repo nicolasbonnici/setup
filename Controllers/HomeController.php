@@ -17,10 +17,9 @@ class HomeController extends \Library\Core\Auth
 
     public function indexAction()
     {
-        $oApp = new \Library\Core\App();
         $this->_view['core_version'] = \Library\Core\App::APP_VERSION;
         $this->_view['core_release_name'] = \Library\Core\App::APP_RELEASE_NAME;
-        $this->_view['php_version'] = $oApp->getPhpVersion();
+        $this->_view['php_version'] = \Library\Core\App::getPhpVersion();
         $this->render('setup/index.tpl');
     }
 
@@ -29,7 +28,7 @@ class HomeController extends \Library\Core\Auth
         $oUsers = new \app\Entities\Collection\UserCollection();
         $oUsers->load();
         $this->_view['oUsers'] = $oUsers;
-        
+
         $this->render('setup/users.tpl');
     }
 
@@ -41,7 +40,7 @@ class HomeController extends \Library\Core\Auth
             $sDatabaseEntityName = $aEntity['TABLE_NAME'];
             $aDatabaseEntitiesClass[] = \Library\Core\Scaffold::generateEntity($sDatabaseEntityName);
         }
-        
+
         $this->_view['aDatabaseEntitiesClass'] = $aDatabaseEntitiesClass;
         $this->render('setup/entities.tpl');
     }
