@@ -1,5 +1,4 @@
 <?php
-
 namespace bundles\setup\Controllers;
 
 /**
@@ -7,11 +6,14 @@ namespace bundles\setup\Controllers;
  *
  * @author info
  */
-class HomeController extends \Library\Core\Auth {
+class HomeController extends \Library\Core\Auth
+{
 
-    public function __preDispatch() {}
+    public function __preDispatch()
+    {}
 
-    public function __postDispatch() {}
+    public function __postDispatch()
+    {}
 
     public function indexAction()
     {
@@ -27,26 +29,25 @@ class HomeController extends \Library\Core\Auth {
         $oUsers = new \app\Entities\Collection\UserCollection();
         $oUsers->load();
         $this->_view['oUsers'] = $oUsers;
-
+        
         $this->render('setup/users.tpl');
     }
 
-    public function entitiesAction() {
-
+    public function entitiesAction()
+    {
         $aDatabaseEntitiesClass = array();
         $aDatabaseEntities = \Library\Core\Tools::getDatabaseEntities();
         foreach ($aDatabaseEntities as $aEntity) {
             $sDatabaseEntityName = $aEntity['TABLE_NAME'];
             $aDatabaseEntitiesClass[] = \Library\Core\Scaffold::generateEntity($sDatabaseEntityName);
         }
-
+        
         $this->_view['aDatabaseEntitiesClass'] = $aDatabaseEntitiesClass;
         $this->render('setup/entities.tpl');
     }
 
-    public function aclAction() {
-
-
+    public function aclAction()
+    {
         $this->render('setup/acl.tpl');
     }
 }
