@@ -24,7 +24,7 @@ meta_description %} {% block js %}
                             Tableau de bord</a>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/users"
+                                <a href="#" class="ui-sendxhr" data-url="/setup/home/users"
                                     data-selector="#setupMain" title="{{tr['users_managment_tip']}}"
                                     data-placement="right"> <span class="glyphicon glyphicon-user"></span>
                                     {{tr['users_managment']}}
@@ -33,7 +33,7 @@ meta_description %} {% block js %}
                         </div>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/acl" data-selector="#setupMain"
+                                <a href="#" class="ui-sendxhr" data-url="/setup/home/acl" data-selector="#setupMain"
                                     title="{{tr['acl_managment_tip']}}" data-placement="right"> <span
                                     class="glyphicon glyphicon-lock"></span> {{tr['acl_managment']}}
                                 </a>
@@ -41,7 +41,7 @@ meta_description %} {% block js %}
                         </div>
                         <div class="list-group-item">
                             <p class="list-group-item-text">
-                                <a href="#" class="ui-sendxhr" data-url="/backend/setup/entities"
+                                <a href="#" class="ui-sendxhr" data-url="/setup/home/entities"
                                     data-selector="#setupMain" title="{{tr['entities_managment_tip']}}"
                                     data-placement="right"> <span class="glyphicon glyphicon-hdd"></span>
                                     {{tr['entities_managment']}}
@@ -72,6 +72,9 @@ meta_description %} {% block js %}
                     <p>
                         Le mode debug est actuellement <strong>{% if sEnv === 'dev'%}activé{% else
                             %}désactivé{% endif %}</strong> sur cet environnement
+                    </p>
+                    <p>
+                        @todo Faire des outils d'administration (wizard install, update, scaffold des bundles et clear cache)
                     </p>
                 </div>
             </div>
