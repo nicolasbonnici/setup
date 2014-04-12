@@ -20,7 +20,7 @@ class HomeController extends \Library\Core\Auth
         $this->aView['core_version'] = \Library\Core\App::APP_VERSION;
         $this->aView['core_release_name'] = \Library\Core\App::APP_RELEASE_NAME;
         $this->aView['php_version'] = \Library\Core\App::getPhpVersion();
-        $this->render('setup/index.tpl');
+        $this->oView->render($this->aView, 'setup/index.tpl');
     }
 
     public function usersAction()
@@ -29,7 +29,7 @@ class HomeController extends \Library\Core\Auth
         $oUsers->load();
         $this->aView['oUsers'] = $oUsers;
 
-        $this->render('setup/users.tpl');
+        $this->oView->render($this->aView, 'setup/users.tpl');
     }
 
     public function entitiesAction()
@@ -42,12 +42,12 @@ class HomeController extends \Library\Core\Auth
         }
 
         $this->aView['aDatabaseEntitiesClass'] = $aDatabaseEntitiesClass;
-        $this->render('setup/entities.tpl');
+        $this->oView->render($this->aView, 'setup/entities.tpl');
     }
 
     public function aclAction()
     {
-        $this->render('setup/acl.tpl');
+        $this->oView->render($this->aView, 'setup/acl.tpl');
     }
 }
 
