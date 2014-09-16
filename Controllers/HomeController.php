@@ -25,7 +25,7 @@ class HomeController extends \Library\Core\Auth
 
     public function usersAction()
     {
-        $oUsers = new \app\Entities\Collection\UserCollection();
+        $oUsers = new \bundles\user\Entities\Collection\UserCollection();
         $oUsers->load();
         $this->aView['oUsers'] = $oUsers;
 
